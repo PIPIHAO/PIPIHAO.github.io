@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>21. 合并两个有序链表</title>
+    <url>/2021/06/06/2021_6_6/</url>
+    <content><![CDATA[<p>这是废话这是废话这是废话这是废话这是废话这<br>是废话这是废话这是废话这是废话<br>这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
+<span id="more"></span>                # 在需要截断的地方加入
+
+<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode *head=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">		</span><br><span class="line">        <span class="keyword">while</span>(l1&amp;&amp;l2)&#123;</span><br><span class="line">            <span class="keyword">if</span>(l1-&gt;val&lt;=l2-&gt;val)&#123;</span><br><span class="line">                cursor-&gt;next=l1;</span><br><span class="line">                l1=l1-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cursor-&gt;next=l2;</span><br><span class="line">                l2=l2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            cursor=cursor-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!l1) cursor-&gt;next=l2;</span><br><span class="line">        <span class="keyword">if</span>(!l2) cursor-&gt;next=l1;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment">        ListNode *first=l1,*second=l2;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(first&amp;&amp;second)&#123;</span></span><br><span class="line"><span class="comment">            if(first-&gt;val &lt;= second-&gt;val)&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">                first=first-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;else&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment">                second=second-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            cursor=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        if(first) cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">        if(second) cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return root-&gt;next;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>83. 删除排序链表中的重复元素</title>
+    <url>/2021/06/07/2021_06_07/</url>
+    <content><![CDATA[<p><img src="/images/LeetCode_83.png"><br><img src="/images/LeetCode_83.png"></p>
+<h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
+<span id="more"></span>                
+
+<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//总结：</span></span><br><span class="line">        <span class="comment">//1.删除结点的变形，只不过需要对删除的结点进行判断</span></span><br><span class="line">        <span class="comment">//2.注意如果使用到cursor-&gt;next-&gt;next是需要对cursor-&gt;next判断是否为空的，其他题也注意一下</span></span><br><span class="line">        <span class="comment">//3.第一直觉是使用两个辅助结点进行删除结点，但其实一个辅助节点也可以，至于错解怎么写对，看这个链接</span></span><br><span class="line">		<span class="comment">//https://blog.csdn.net/Tanyongyin/article/details/113035677</span></span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">        <span class="keyword">while</span>(cursor-&gt;next)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cursor-&gt;val==cursor-&gt;next-&gt;val)&#123;</span><br><span class="line">                cursor-&gt;next=cursor-&gt;next-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cursor=cursor-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*错解</span></span><br><span class="line"><span class="comment">        if(head==nullptr) return head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        ListNode *first=head;</span></span><br><span class="line"><span class="comment">        ListNode *second=head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(first!=nullptr)&#123;</span></span><br><span class="line"><span class="comment">            second=first-&gt;next;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            while(second-&gt;val==first-&gt;val &amp;&amp; second!=nullptr)&#123;</span></span><br><span class="line"><span class="comment">                cout&lt;&lt;first-&gt;val&lt;&lt;&quot;     &quot;&lt;&lt;second-&gt;next&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">                second=second-&gt;next;</span></span><br><span class="line"><span class="comment">                </span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            first-&gt;next=second;</span></span><br><span class="line"><span class="comment">            first=second;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return head;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ywh&#39;s article</title>
+    <url>/2021/06/04/ywh-s-article/</url>
+    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>11111111111</p>
+<hr>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>2222222222</p>
+<hr>
+<p>##啪啪啪啪啪啪</p>
+<p>333333333</p>
+]]></content>
+      <categories>
+        <category>yyy</category>
+      </categories>
+      <tags>
+        <tag>yzl</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>杨文豪的文章</title>
     <url>/2021/06/05/my-first-article/</url>
     <content><![CDATA[<p>这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文</p>
@@ -33,40 +85,6 @@
 ]]></content>
       <tags>
         <tag>ywh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>21. 合并两个有序链表</title>
-    <url>/2021/06/06/2021_6_6/</url>
-    <content><![CDATA[<p>这是废话这是废话这是废话这是废话这是废话这<br>是废话这是废话这是废话这是废话<br>这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
-<span id="more"></span>                # 在需要截断的地方加入
-
-<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode *head=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">		</span><br><span class="line">        <span class="keyword">while</span>(l1&amp;&amp;l2)&#123;</span><br><span class="line">            <span class="keyword">if</span>(l1-&gt;val&lt;=l2-&gt;val)&#123;</span><br><span class="line">                cursor-&gt;next=l1;</span><br><span class="line">                l1=l1-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cursor-&gt;next=l2;</span><br><span class="line">                l2=l2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            cursor=cursor-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!l1) cursor-&gt;next=l2;</span><br><span class="line">        <span class="keyword">if</span>(!l2) cursor-&gt;next=l1;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment">        ListNode *first=l1,*second=l2;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(first&amp;&amp;second)&#123;</span></span><br><span class="line"><span class="comment">            if(first-&gt;val &lt;= second-&gt;val)&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">                first=first-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;else&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment">                second=second-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            cursor=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        if(first) cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">        if(second) cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return root-&gt;next;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ywh&#39;s article</title>
-    <url>/2021/06/04/ywh-s-article/</url>
-    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>11111111111</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>2222222222</p>
-<hr>
-<p>##啪啪啪啪啪啪</p>
-<p>333333333</p>
-]]></content>
-      <categories>
-        <category>yyy</category>
-      </categories>
-      <tags>
-        <tag>yzl</tag>
       </tags>
   </entry>
 </search>
