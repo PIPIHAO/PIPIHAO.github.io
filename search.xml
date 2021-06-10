@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>21. 合并两个有序链表</title>
-    <url>/2021/06/06/2021_6_6/</url>
+    <url>/2021/06/06/LeetCode_20210606/</url>
     <content><![CDATA[<p>这是废话这是废话这是废话这是废话这是废话这<br>是废话这是废话这是废话这是废话<br>这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
 <span id="more"></span>                # 在需要截断的地方加入
 
@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <title>83. 删除排序链表中的重复元素</title>
-    <url>/2021/06/07/2021_06_07/</url>
+    <url>/2021/06/07/LeetCode_20210607/</url>
     <content><![CDATA[<p><img src="/images/LeetCode_83.png"><br><img src="/images/LeetCode_83.png"></p>
 <h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
 <span id="more"></span>                
@@ -36,29 +36,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/06/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="��������-YWH-Hello-World"><a href="#��������-YWH-Hello-World" class="headerlink" title="�������� YWH  Hello World"></a>�������� YWH  Hello World</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>ywh</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>24. 两两交换链表中的节点</title>
-    <url>/2021/06/08/2021_06_08/</url>
+    <url>/2021/06/08/LeetCode_20210608/</url>
     <content><![CDATA[<h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
 <span id="more"></span>                
 
@@ -118,6 +97,80 @@
       </tags>
   </entry>
   <entry>
+    <title>86. 分隔链表</title>
+    <url>/2021/06/10/LeetCode_20210610/</url>
+    <content><![CDATA[<blockquote>
+<p>参考链接：</p>
+<ol>
+<li><a href="https://leetcode-cn.com/problems/rotate-list/submissions/">https://leetcode-cn.com/problems/rotate-list/submissions/</a></li>
+<li><a href="https://www.cnblogs.com/grandyang/p/4355505.html">https://www.cnblogs.com/grandyang/p/4355505.html</a></li>
+</ol>
+</blockquote>
+<p><strong>给你一个链表的头节点 <code>head</code> 和一个特定值 <code>x</code> ，请你对链表进行分隔，使得所有 小于<code>x</code> 的节点都出现在 大于或等于 <code>x</code> 的节点之前。你应当 保留 两个分区中每个节点的初始相对位置。</strong></p>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<p>示例1：<br><img src="https://assets.leetcode.com/uploads/2021/01/04/partition.jpg" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>输入：head = [1,4,3,2,5,2], x = 3<br>输出：[1,2,2,4,3,5]</p>
+</blockquote>
+<p>示例2：</p>
+<blockquote>
+<p>输入：head = [2,1], x = 2<br>输出：[1,2]</p>
+</blockquote>
+<span id="more"></span>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<h3 id="方法一：分成两个链表"><a href="#方法一：分成两个链表" class="headerlink" title="方法一：分成两个链表"></a>方法一：分成两个链表</h3><p>自己的第一想法是将初始的链表分成两个满足题目条件的链表，然后再根据题目条件将这两个链表进行连接即可.</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">partition</span><span class="params">(ListNode* head, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        ListNode *l1=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        ListNode *l2=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        ListNode *cur1=l1;</span><br><span class="line">        ListNode *cur2=l2;</span><br><span class="line"></span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">        <span class="keyword">while</span>(cursor!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cursor-&gt;val &lt; x)&#123;</span><br><span class="line">                cur1-&gt;next=cursor;</span><br><span class="line">                cur1=cur1-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cur2-&gt;next=cursor;</span><br><span class="line">                cur2=cur2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            cursor=cursor-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        cur1-&gt;next=l2-&gt;next;</span><br><span class="line">        cur2-&gt;next=<span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> l1-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<h3 id="方法二：自己再定义一个链表"><a href="#方法二：自己再定义一个链表" class="headerlink" title="方法二：自己再定义一个链表"></a>方法二：自己再定义一个链表</h3><p>将所有小于给定值的节点取出组成一个新的链表，此时原链表中剩余的节点的值都大于或等于给定值，只要将原链表直接接在新链表后即可<br>其实再想一下这道题的这个想法，也就是删除节点，只是被删除的结点需要放到另一个新的链表中，所以和之前做的<code>83. 删除排序链表中的重复元素</code>有一些类似之处，只是删除的结点操作不同而已<br>此种解法链表变化顺序为：</p>
+<p>Original: 1 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 5 -&gt; 2 </p>
+<p>New:</p>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+ 
+<p>Original: 4 -&gt; 3 -&gt; 2 -&gt; 5 -&gt; 2 </p>
+<p>New:　  1</p>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+ 
+<p>Original: 4 -&gt; 3 -&gt; 5 -&gt; 2 </p>
+<p>New:　  1 -&gt; 2</p>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<p>Original: 4 -&gt; 3 -&gt; 5 </p>
+<p>New:　  1 -&gt; 2 -&gt; 2</p>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+ 
+<p>Original: </p>
+<p>New:　  1 -&gt; 2 -&gt; 2 -&gt; 4 -&gt; 3 -&gt; 5 </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">partition</span><span class="params">(ListNode *head, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!head) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *dummy = <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">-1</span>);</span><br><span class="line">        ListNode *newDummy = <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">-1</span>);</span><br><span class="line">        dummy-&gt;next = head;</span><br><span class="line"></span><br><span class="line">        ListNode *cur = dummy, *p = newDummy;</span><br><span class="line">        <span class="keyword">while</span> (cur-&gt;next) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur-&gt;next-&gt;val &lt; x) &#123;</span><br><span class="line">			<span class="comment">//除了删除结点的那步，其余的三步骤都是对被删除结点的特殊操作</span></span><br><span class="line">                p-&gt;next = cur-&gt;next;				</span><br><span class="line">                p = p-&gt;next;</span><br><span class="line">                cur-&gt;next = cur-&gt;next-&gt;next;		<span class="comment">//这是相当于删除结点的关键步骤</span></span><br><span class="line">                p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = cur-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        p-&gt;next = dummy-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> newDummy-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<h3 id="方法三：移动结点"><a href="#方法三：移动结点" class="headerlink" title="方法三：移动结点"></a>方法三：移动结点</h3><p>这道题要求我们划分链表，把所有小于给定值的节点都移到前面，大于该值的节点顺序不变，相当于一个局部排序的问题。那么可以想到的一种解法是首先找到第一个大于或等于给定值的节点，用题目中给的例子来说就是先找到4，然后再找小于3的值，每找到一个就将其取出置于4之前即可</p>
+<pre><code>dummy 
+  *    -    1    |-    4    -    3    -    2    -    5    -    nullptr
+            pre                 cur        tmp                            
+(pre-&gt;next-&gt;val &gt; x                cur-&gt;next-&gt;val &lt; x)
+
+变成
+
+dummy 
+  *    -    1    -    2    |-    4    -    3    -    5    -    nullptr
+                    pre/tmp               cur                
+</code></pre>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">partition</span><span class="params">(ListNode *head, <span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        ListNode *dummy = <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">-1</span>);</span><br><span class="line">        dummy-&gt;next = head;</span><br><span class="line">        ListNode *pre = dummy, *cur = head;;</span><br><span class="line">        <span class="keyword">while</span> (pre-&gt;next &amp;&amp; pre-&gt;next-&gt;val &lt; x) pre = pre-&gt;next;</span><br><span class="line">        cur = pre;</span><br><span class="line">        <span class="keyword">while</span> (cur-&gt;next) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur-&gt;next-&gt;val &lt; x) &#123;</span><br><span class="line">                ListNode *tmp = cur-&gt;next;</span><br><span class="line">                cur-&gt;next = tmp-&gt;next;</span><br><span class="line">                tmp-&gt;next = pre-&gt;next;</span><br><span class="line">                pre-&gt;next = tmp;</span><br><span class="line">                pre = pre-&gt;next;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = cur-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>杨文豪的文章</title>
     <url>/2021/06/05/my-first-article/</url>
     <content><![CDATA[<p>这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文</p>
@@ -146,6 +199,27 @@
       </categories>
       <tags>
         <tag>yzl</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/06/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="��������-YWH-Hello-World"><a href="#��������-YWH-Hello-World" class="headerlink" title="�������� YWH  Hello World"></a>�������� YWH  Hello World</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>ywh</tag>
       </tags>
   </entry>
 </search>
