@@ -19,40 +19,6 @@
       </tags>
   </entry>
   <entry>
-    <title>24. 两两交换链表中的节点</title>
-    <url>/2021/06/08/LeetCode_20210608/</url>
-    <content><![CDATA[<h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
-<span id="more"></span>                
-
-<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> //递归</span></span><br><span class="line"><span class="comment">class Solution &#123;</span></span><br><span class="line"><span class="comment">public:</span></span><br><span class="line"><span class="comment">    ListNode* swapPairs(ListNode* head) &#123;</span></span><br><span class="line"><span class="comment">        if(head==nullptr||head-&gt;next==nullptr)</span></span><br><span class="line"><span class="comment">            return head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *temp=head-&gt;next;</span></span><br><span class="line"><span class="comment">        head-&gt;next=swapPairs(head-&gt;next-&gt;next);</span></span><br><span class="line"><span class="comment">        temp-&gt;next=head;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        return temp;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//迭代</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        ListNode *root=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        root-&gt;next=head;</span><br><span class="line"></span><br><span class="line">        ListNode *tmp=root;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(tmp-&gt;next!=<span class="literal">nullptr</span>)&#123;              <span class="comment">//如果是偶数个结点直接跳出循环</span></span><br><span class="line">            ListNode *left=tmp-&gt;next;</span><br><span class="line">            ListNode *right=left-&gt;next;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(left-&gt;next!=<span class="literal">nullptr</span>)&#123;            </span><br><span class="line">                tmp-&gt;next=right;</span><br><span class="line">                left-&gt;next=right-&gt;next;</span><br><span class="line">                right-&gt;next=left;       <span class="comment">//这里的left和right不要写反了</span></span><br><span class="line"></span><br><span class="line">                cout&lt;&lt;left-&gt;val&lt;&lt;<span class="string">&quot;       &quot;</span>&lt;&lt;right-&gt;val&lt;&lt;endl;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;                      <span class="comment">//这里是判断最后剩一个结点的情况，也就是奇数个节点的情况</span></span><br><span class="line">                <span class="keyword">return</span> root-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            tmp=left;       <span class="comment">//注意这里不要写成tmp=right,因为left和right的位置调换了</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root-&gt;next;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        root-&gt;next=head;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment">        while(cursor-&gt;next!=nullptr&amp;&amp;cursor-&gt;next-&gt;next!=nullptr)&#123;//注意条件是“&amp;&amp;”，不是“||”</span></span><br><span class="line"><span class="comment">            ListNode *p=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">            ListNode *q=p-&gt;next;</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">            cursor-&gt;next=q;</span></span><br><span class="line"><span class="comment">            p-&gt;next=q-&gt;next;</span></span><br><span class="line"><span class="comment">            q-&gt;next=p;</span></span><br><span class="line"><span class="comment">            cursor=cursor-&gt;next-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return root-&gt;next;*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>21. 合并两个有序链表</title>
-    <url>/2021/06/06/LeetCode_20210606/</url>
-    <content><![CDATA[<p>这是废话这是废话这是废话这是废话这是废话这<br>是废话这是废话这是废话这是废话<br>这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
-<span id="more"></span>                # 在需要截断的地方加入
-
-<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode *head=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">		</span><br><span class="line">        <span class="keyword">while</span>(l1&amp;&amp;l2)&#123;</span><br><span class="line">            <span class="keyword">if</span>(l1-&gt;val&lt;=l2-&gt;val)&#123;</span><br><span class="line">                cursor-&gt;next=l1;</span><br><span class="line">                l1=l1-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cursor-&gt;next=l2;</span><br><span class="line">                l2=l2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            cursor=cursor-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!l1) cursor-&gt;next=l2;</span><br><span class="line">        <span class="keyword">if</span>(!l2) cursor-&gt;next=l1;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment">        ListNode *first=l1,*second=l2;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(first&amp;&amp;second)&#123;</span></span><br><span class="line"><span class="comment">            if(first-&gt;val &lt;= second-&gt;val)&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">                first=first-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;else&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment">                second=second-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            cursor=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        if(first) cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">        if(second) cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return root-&gt;next;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>61. 旋转链表</title>
     <url>/2021/06/09/LeetCode_20210609/</url>
     <content><![CDATA[<blockquote>
@@ -88,6 +54,40 @@
 <p>方法2：使链表变成循环链表，然后在具体的旋转位置处断开。喵啊~（见第二个参考链接的方法二）</p>
 </blockquote>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">rotateRight</span><span class="params">(ListNode *head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!head) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">1</span>;</span><br><span class="line">        ListNode *cur = head;</span><br><span class="line">        <span class="keyword">while</span> (cur-&gt;next) &#123;</span><br><span class="line">            ++n;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        cur-&gt;next = head;</span><br><span class="line">        <span class="keyword">int</span> m = n - k % n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode *newhead = cur-&gt;next;</span><br><span class="line">        cur-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> newhead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>21. 合并两个有序链表</title>
+    <url>/2021/06/06/LeetCode_20210606/</url>
+    <content><![CDATA[<p>这是废话这是废话这是废话这是废话这是废话这<br>是废话这是废话这是废话这是废话<br>这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
+<span id="more"></span>                # 在需要截断的地方加入
+
+<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode *head=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">		</span><br><span class="line">        <span class="keyword">while</span>(l1&amp;&amp;l2)&#123;</span><br><span class="line">            <span class="keyword">if</span>(l1-&gt;val&lt;=l2-&gt;val)&#123;</span><br><span class="line">                cursor-&gt;next=l1;</span><br><span class="line">                l1=l1-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cursor-&gt;next=l2;</span><br><span class="line">                l2=l2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            cursor=cursor-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!l1) cursor-&gt;next=l2;</span><br><span class="line">        <span class="keyword">if</span>(!l2) cursor-&gt;next=l1;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment">        ListNode *first=l1,*second=l2;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(first&amp;&amp;second)&#123;</span></span><br><span class="line"><span class="comment">            if(first-&gt;val &lt;= second-&gt;val)&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">                first=first-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;else&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment">                second=second-&gt;next;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            cursor=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        if(first) cursor-&gt;next=first;</span></span><br><span class="line"><span class="comment">        if(second) cursor-&gt;next=second;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return root-&gt;next;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>24. 两两交换链表中的节点</title>
+    <url>/2021/06/08/LeetCode_20210608/</url>
+    <content><![CDATA[<h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
+<span id="more"></span>                
+
+<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> //递归</span></span><br><span class="line"><span class="comment">class Solution &#123;</span></span><br><span class="line"><span class="comment">public:</span></span><br><span class="line"><span class="comment">    ListNode* swapPairs(ListNode* head) &#123;</span></span><br><span class="line"><span class="comment">        if(head==nullptr||head-&gt;next==nullptr)</span></span><br><span class="line"><span class="comment">            return head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *temp=head-&gt;next;</span></span><br><span class="line"><span class="comment">        head-&gt;next=swapPairs(head-&gt;next-&gt;next);</span></span><br><span class="line"><span class="comment">        temp-&gt;next=head;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        return temp;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//迭代</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        ListNode *root=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        root-&gt;next=head;</span><br><span class="line"></span><br><span class="line">        ListNode *tmp=root;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(tmp-&gt;next!=<span class="literal">nullptr</span>)&#123;              <span class="comment">//如果是偶数个结点直接跳出循环</span></span><br><span class="line">            ListNode *left=tmp-&gt;next;</span><br><span class="line">            ListNode *right=left-&gt;next;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(left-&gt;next!=<span class="literal">nullptr</span>)&#123;            </span><br><span class="line">                tmp-&gt;next=right;</span><br><span class="line">                left-&gt;next=right-&gt;next;</span><br><span class="line">                right-&gt;next=left;       <span class="comment">//这里的left和right不要写反了</span></span><br><span class="line"></span><br><span class="line">                cout&lt;&lt;left-&gt;val&lt;&lt;<span class="string">&quot;       &quot;</span>&lt;&lt;right-&gt;val&lt;&lt;endl;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;                      <span class="comment">//这里是判断最后剩一个结点的情况，也就是奇数个节点的情况</span></span><br><span class="line">                <span class="keyword">return</span> root-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            tmp=left;       <span class="comment">//注意这里不要写成tmp=right,因为left和right的位置调换了</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root-&gt;next;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        root-&gt;next=head;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment">        while(cursor-&gt;next!=nullptr&amp;&amp;cursor-&gt;next-&gt;next!=nullptr)&#123;//注意条件是“&amp;&amp;”，不是“||”</span></span><br><span class="line"><span class="comment">            ListNode *p=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">            ListNode *q=p-&gt;next;</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">            cursor-&gt;next=q;</span></span><br><span class="line"><span class="comment">            p-&gt;next=q-&gt;next;</span></span><br><span class="line"><span class="comment">            q-&gt;next=p;</span></span><br><span class="line"><span class="comment">            cursor=cursor-&gt;next-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return root-&gt;next;*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>LeetCode</category>
       </categories>
@@ -171,27 +171,6 @@ dummy
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/06/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="��������-YWH-Hello-World"><a href="#��������-YWH-Hello-World" class="headerlink" title="�������� YWH  Hello World"></a>�������� YWH  Hello World</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>ywh</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>237. 删除链表中的节点</title>
     <url>/2021/06/20/LeetCode_20210620/</url>
     <content><![CDATA[<blockquote>
@@ -204,7 +183,7 @@ dummy
 <p><strong>请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点。传入函数的唯一参数为 <code>要被删除的节点</code> 。</strong></p>
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<p>现有一个链表 – head = [4,5,1,9]，它可以表示为:<br><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/01/19/237_example.png" alt="在这里插入图片描述"></p>
+<p>现有一个链表 – head = [4,5,1,9]，它可以表示为:<br><img src="/images/LeetCode_237.png"></p>
 <p>示例1：</p>
 <blockquote>
 <p>输入：head = [4,5,1,9], node = 5<br>输出：[4,1,9]<br>解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.</p>
@@ -227,20 +206,24 @@ dummy
       </tags>
   </entry>
   <entry>
-    <title>ywh&#39;s article</title>
-    <url>/2021/06/04/ywh-s-article/</url>
-    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>11111111111</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>2222222222</p>
-<hr>
-<p>##啪啪啪啪啪啪</p>
-<p>333333333</p>
+    <title>Hello World</title>
+    <url>/2021/06/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="��������-YWH-Hello-World"><a href="#��������-YWH-Hello-World" class="headerlink" title="�������� YWH  Hello World"></a>�������� YWH  Hello World</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>yyy</category>
-      </categories>
       <tags>
-        <tag>yzl</tag>
+        <tag>ywh</tag>
       </tags>
   </entry>
   <entry>
@@ -255,6 +238,23 @@ dummy
       <tags>
         <tag>ywh</tag>
         <tag>uzl</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ywh&#39;s article</title>
+    <url>/2021/06/04/ywh-s-article/</url>
+    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>11111111111</p>
+<hr>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>2222222222</p>
+<hr>
+<p>##啪啪啪啪啪啪</p>
+<p>333333333</p>
+]]></content>
+      <categories>
+        <category>yyy</category>
+      </categories>
+      <tags>
+        <tag>yzl</tag>
       </tags>
   </entry>
 </search>
