@@ -20,33 +20,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;pipihao.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="参考链接：  https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;rotate-list&#x2F;submissions&#x2F; https:&#x2F;&#x2F;www.cnblogs.com&#x2F;grandyang&#x2F;p&#x2F;4355505.html   给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。   示例1：  输入：head &#x3D; [1,2,3,4,5]输出：[5,4,3,2,1]  示例2：">
+<meta name="description" content="参考链接：  https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;rotate-list&#x2F;submissions&#x2F; https:&#x2F;&#x2F;www.cnblogs.com&#x2F;grandyang&#x2F;p&#x2F;4355505.html   请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点。传入函数的唯一参数为 要被删除的节点 。   现有一个链表 – head &#x3D; [4,5,1,9]，它可以表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="206. 反转链表">
-<meta property="og:url" content="https://pipihao.github.io/2021/06/22/LeetCode_20210622/index.html">
+<meta property="og:title" content="237. 删除链表中的节点">
+<meta property="og:url" content="https://pipihao.github.io/2021/06/20/LeetCode/LeetCode_20210620/index.html">
 <meta property="og:site_name" content="皮皮豪">
-<meta property="og:description" content="参考链接：  https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;rotate-list&#x2F;submissions&#x2F; https:&#x2F;&#x2F;www.cnblogs.com&#x2F;grandyang&#x2F;p&#x2F;4355505.html   给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。   示例1：  输入：head &#x3D; [1,2,3,4,5]输出：[5,4,3,2,1]  示例2：">
+<meta property="og:description" content="参考链接：  https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;rotate-list&#x2F;submissions&#x2F; https:&#x2F;&#x2F;www.cnblogs.com&#x2F;grandyang&#x2F;p&#x2F;4355505.html   请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点。传入函数的唯一参数为 要被删除的节点 。   现有一个链表 – head &#x3D; [4,5,1,9]，它可以表">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg">
-<meta property="og:image" content="https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg">
-<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_206.jpg">
-<meta property="article:published_time" content="2021-06-22T08:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-23T07:39:18.967Z">
+<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_237.png">
+<meta property="article:published_time" content="2021-06-20T14:51:09.171Z">
+<meta property="article:modified_time" content="2021-06-21T15:44:47.479Z">
 <meta property="article:author" content="杨文豪">
 <meta property="article:tag" content="LeetCode">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg">
+<meta name="twitter:image" content="https://pipihao.github.io/images/LeetCode_237.png">
 
 
-<link rel="canonical" href="https://pipihao.github.io/2021/06/22/LeetCode_20210622/">
+<link rel="canonical" href="https://pipihao.github.io/2021/06/20/LeetCode/LeetCode_20210620/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;pipihao.github.io&#x2F;2021&#x2F;06&#x2F;22&#x2F;LeetCode_20210622&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;22&#x2F;LeetCode_20210622&#x2F;&quot;,&quot;title&quot;:&quot;206. 反转链表&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;pipihao.github.io&#x2F;2021&#x2F;06&#x2F;20&#x2F;LeetCode&#x2F;LeetCode_20210620&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;20&#x2F;LeetCode&#x2F;LeetCode_20210620&#x2F;&quot;,&quot;title&quot;:&quot;237. 删除链表中的节点&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>206. 反转链表 | 皮皮豪</title>
+<title>237. 删除链表中的节点 | 皮皮豪</title>
   
 
 
@@ -93,9 +91,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">15</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">16</span></a></li>
         <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
         <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
         <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
@@ -155,7 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E8%BF%AD%E4%BB%A3"><span class="nav-number">1.</span> <span class="nav-text">方法一：迭代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text">方法二：递归</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9%EF%BC%88%E9%80%9A%E8%BF%87%E8%B5%8B%E5%80%BC%E4%B8%8B%E4%B8%80%E8%8A%82%E7%82%B9%E7%9A%84%E5%80%BC%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%88%A0%E9%99%A4%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">方法：删除链表的节点（通过赋值下一节点的值来进行删除）</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -171,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,7 +178,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -251,7 +249,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pipihao.github.io/2021/06/22/LeetCode_20210622/">
+    <link itemprop="mainEntityOfPage" href="https://pipihao.github.io/2021/06/20/LeetCode/LeetCode_20210620/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -264,7 +262,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          206. 反转链表
+          237. 删除链表中的节点
         </h1>
 
         <div class="post-meta-container">
@@ -274,10 +272,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-06-22 00:00:00 / 修改时间：23:39:18" itemprop="dateCreated datePublished" datetime="2021-06-22T00:00:00-08:00">2021-06-22</time>
+      <time title="创建时间：2021-06-20 06:51:09" itemprop="dateCreated datePublished" datetime="2021-06-20T06:51:09-08:00">2021-06-20</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-21 07:44:47" itemprop="dateModified" datetime="2021-06-21T07:44:47-08:00">2021-06-21</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -305,33 +309,25 @@
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/grandyang/p/4355505.html">https://www.cnblogs.com/grandyang/p/4355505.html</a></li>
 </ol>
 </blockquote>
-<p><strong>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</strong></p>
+<p><strong>请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点。传入函数的唯一参数为 <code>要被删除的节点</code> 。</strong></p>
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<p>示例1：<br><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg" alt="在这里插入图片描述"></p>
+<p>现有一个链表 – head = [4,5,1,9]，它可以表示为:</p>
+<img src="/images/LeetCode_237.png">
+
+<p>示例1：</p>
 <blockquote>
-<p>输入：head = [1,2,3,4,5]<br>输出：[5,4,3,2,1]</p>
+<p>输入：head = [4,5,1,9], node = 5<br>输出：[4,1,9]<br>解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.</p>
 </blockquote>
-<p>示例2：<br><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg" alt="在这里插入图片描述"></p>
+<p>示例2：</p>
 <blockquote>
-<p>输入：head = [1,2]<br>输出：[2,1]</p>
+<p>输入：head = [4,5,1,9], node = 1<br>输出：[4,5,9]<br>解释：给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9.</p>
 </blockquote>
-<p>示例3：</p>
-<blockquote>
-<p>输入：head = []<br>输出：[]</p>
-</blockquote>
-<p>进阶：链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
 <span id="more"></span>
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<h3 id="方法一：迭代"><a href="#方法一：迭代" class="headerlink" title="方法一：迭代"></a>方法一：迭代</h3><p>可以将该题转换为 两个链表，新建一个链表，然后从旧链表中依次取下头节点，然后当成新链表的头节点<br><img src="/images/LeetCode_206.jpg"></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode *newHead = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">while</span> (head) &#123;</span><br><span class="line">            ListNode *t = head-&gt;next;</span><br><span class="line">            head-&gt;next = newHead;</span><br><span class="line">            newHead = head;</span><br><span class="line">            head = t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
-
-<h3 id="方法二：递归"><a href="#方法二：递归" class="headerlink" title="方法二：递归"></a>方法二：递归</h3><p>下面我们来看递归解法，代码量更少，递归解法的思路是，不断的进入递归函数，直到head指向倒数第二个节点，因为head指向空或者是最后一个结点都直接返回了，newHead则指向对head的下一个结点调用递归函数返回的头结点，此时newHead指向最后一个结点，然后head的下一个结点的next指向head本身，这个相当于把head结点移动到末尾的操作，因为是回溯的操作，所以head的下一个结点总是在上一轮被移动到末尾了，但head之后的next还没有断开，所以可以顺势将head移动到末尾，再把next断开，最后返回newHead即可，代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!head || !head-&gt;next) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode *newHead = <span class="built_in">reverseList</span>(head-&gt;next);</span><br><span class="line">        head-&gt;next-&gt;next = head;</span><br><span class="line">        head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="方法：删除链表的节点（通过赋值下一节点的值来进行删除）"><a href="#方法：删除链表的节点（通过赋值下一节点的值来进行删除）" class="headerlink" title="方法：删除链表的节点（通过赋值下一节点的值来进行删除）"></a>方法：删除链表的节点（通过赋值下一节点的值来进行删除）</h3><p>自己的第一想法是将初始的链表分成两个满足题目条件的链表，然后再根据题目条件将这两个链表进行连接即可.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode* node)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//在只给定被删除节点的情况下，删除该节点，并没有给出head结点</span></span><br><span class="line"></span><br><span class="line">        node-&gt;val=node-&gt;next-&gt;val;</span><br><span class="line">        node-&gt;next=node-&gt;next-&gt;next;</span><br><span class="line">		</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	注意另一种删除节点的方法是通过删除节点的前一节点辅助，使用了一个cursor-&gt;next</span></span><br><span class="line"><span class="comment">	而且注意while循环的判断条件，这在其他题目中也会遇到</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        root-&gt;next=head;</span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(cursor-&gt;next!=nullptr)&#123;</span></span><br><span class="line"><span class="comment">            if(cursor-&gt;next-&gt;val==node-&gt;val)&#123;</span></span><br><span class="line"><span class="comment">                cursor-&gt;next=cursor-&gt;next-&gt;next;</span></span><br><span class="line"><span class="comment">                return ;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            else</span></span><br><span class="line"><span class="comment">                cursor=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        return ;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -348,13 +344,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/06/21/LeetCode_20210621/" rel="prev" title="234. 回文链表">
-                  <i class="fa fa-chevron-left"></i> 234. 回文链表
+                <a href="/2021/06/19/LeetCode/Leetcode_20210619/" rel="prev" title="203. 移除链表元素">
+                  <i class="fa fa-chevron-left"></i> 203. 移除链表元素
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/06/23/LeetCode_20210623/" rel="next" title="92. 反转链表 II">
-                  92. 反转链表 II <i class="fa fa-chevron-right"></i>
+                <a href="/2021/06/21/LeetCode/LeetCode_20210621/" rel="next" title="234. 回文链表">
+                  234. 回文链表 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
