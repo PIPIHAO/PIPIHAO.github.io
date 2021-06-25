@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>杨文豪的文章</title>
+    <url>/2021/06/05/my-first-article/</url>
+    <content><![CDATA[<p>这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文</p>
+]]></content>
+      <categories>
+        <category>hexo+github博客搭建</category>
+        <category>yyy</category>
+      </categories>
+      <tags>
+        <tag>ywh</tag>
+        <tag>uzl</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/06/04/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -22,17 +36,21 @@
       </tags>
   </entry>
   <entry>
-    <title>杨文豪的文章</title>
-    <url>/2021/06/05/my-first-article/</url>
-    <content><![CDATA[<p>这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文</p>
+    <title>83. 删除排序链表中的重复元素</title>
+    <url>/2021/06/07/LeetCode/LeetCode_20210607/</url>
+    <content><![CDATA[<p><img src="/images/LeetCode_83.png"><br><img src="/images/LeetCode_83.png"></p>
+<h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
+<span id="more"></span>                
+
+<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//总结：</span></span><br><span class="line">        <span class="comment">//1.删除结点的变形，只不过需要对删除的结点进行判断</span></span><br><span class="line">        <span class="comment">//2.注意如果使用到cursor-&gt;next-&gt;next是需要对cursor-&gt;next判断是否为空的，其他题也注意一下</span></span><br><span class="line">        <span class="comment">//3.第一直觉是使用两个辅助结点进行删除结点，但其实一个辅助节点也可以，至于错解怎么写对，看这个链接</span></span><br><span class="line">		<span class="comment">//https://blog.csdn.net/Tanyongyin/article/details/113035677</span></span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">        <span class="keyword">while</span>(cursor-&gt;next)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cursor-&gt;val==cursor-&gt;next-&gt;val)&#123;</span><br><span class="line">                cursor-&gt;next=cursor-&gt;next-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cursor=cursor-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*错解</span></span><br><span class="line"><span class="comment">        if(head==nullptr) return head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        ListNode *first=head;</span></span><br><span class="line"><span class="comment">        ListNode *second=head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(first!=nullptr)&#123;</span></span><br><span class="line"><span class="comment">            second=first-&gt;next;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            while(second-&gt;val==first-&gt;val &amp;&amp; second!=nullptr)&#123;</span></span><br><span class="line"><span class="comment">                cout&lt;&lt;first-&gt;val&lt;&lt;&quot;     &quot;&lt;&lt;second-&gt;next&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">                second=second-&gt;next;</span></span><br><span class="line"><span class="comment">                </span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            first-&gt;next=second;</span></span><br><span class="line"><span class="comment">            first=second;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return head;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>hexo+github博客搭建</category>
-        <category>yyy</category>
+        <category>LeetCode</category>
       </categories>
       <tags>
-        <tag>ywh</tag>
-        <tag>uzl</tag>
+        <tag>LeetCode</tag>
+        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -87,15 +105,41 @@
       </tags>
   </entry>
   <entry>
-    <title>83. 删除排序链表中的重复元素</title>
-    <url>/2021/06/07/LeetCode/LeetCode_20210607/</url>
-    <content><![CDATA[<p><img src="/images/LeetCode_83.png"><br><img src="/images/LeetCode_83.png"></p>
-<h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
-<span id="more"></span>                
+    <title>61. 旋转链表</title>
+    <url>/2021/06/09/LeetCode/LeetCode_20210609/</url>
+    <content><![CDATA[<blockquote>
+<p>参考链接：</p>
+<ol>
+<li><a href="https://leetcode-cn.com/problems/rotate-list/submissions/">https://leetcode-cn.com/problems/rotate-list/submissions/</a></li>
+<li><a href="https://www.cnblogs.com/grandyang/p/4355505.html">https://www.cnblogs.com/grandyang/p/4355505.html</a></li>
+</ol>
+</blockquote>
+<h5 id="给你一个链表的头节点-head-，旋转链表，将链表每个节点向右移动-k-个位置。"><a href="#给你一个链表的头节点-head-，旋转链表，将链表每个节点向右移动-k-个位置。" class="headerlink" title="给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。"></a>给你一个链表的头节点 <code>head</code> ，旋转链表，将链表每个节点向右移动 k 个位置。</h5><p><img src="https://img-blog.csdnimg.cn/img_convert/192699c8d11d5f13a4f06fdf4823fd2e.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>输入：head = [1,2,3,4,5], k = 2<br>输出：[4,5,1,2,3]</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/98af10b6c9f0f827ddb34c07b83e40c6.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>输入：head = [0,1,2], k = 4<br>输出：[2,0,1]</p>
+</blockquote>
+<span id="more"></span>
 
-<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//总结：</span></span><br><span class="line">        <span class="comment">//1.删除结点的变形，只不过需要对删除的结点进行判断</span></span><br><span class="line">        <span class="comment">//2.注意如果使用到cursor-&gt;next-&gt;next是需要对cursor-&gt;next判断是否为空的，其他题也注意一下</span></span><br><span class="line">        <span class="comment">//3.第一直觉是使用两个辅助结点进行删除结点，但其实一个辅助节点也可以，至于错解怎么写对，看这个链接</span></span><br><span class="line">		<span class="comment">//https://blog.csdn.net/Tanyongyin/article/details/113035677</span></span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">        <span class="keyword">while</span>(cursor-&gt;next)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cursor-&gt;val==cursor-&gt;next-&gt;val)&#123;</span><br><span class="line">                cursor-&gt;next=cursor-&gt;next-&gt;next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cursor=cursor-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*错解</span></span><br><span class="line"><span class="comment">        if(head==nullptr) return head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        ListNode *first=head;</span></span><br><span class="line"><span class="comment">        ListNode *second=head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        while(first!=nullptr)&#123;</span></span><br><span class="line"><span class="comment">            second=first-&gt;next;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            while(second-&gt;val==first-&gt;val &amp;&amp; second!=nullptr)&#123;</span></span><br><span class="line"><span class="comment">                cout&lt;&lt;first-&gt;val&lt;&lt;&quot;     &quot;&lt;&lt;second-&gt;next&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">                second=second-&gt;next;</span></span><br><span class="line"><span class="comment">                </span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            first-&gt;next=second;</span></span><br><span class="line"><span class="comment">            first=second;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return head;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<p>一般第一想法就是使用快慢指针，通过将链表分成两部分，再重新连接链表达到旋转的效果，使用快慢指针时注意有些坑：<br>&emsp; （1）这题旋转的位置可能会大于链表长度，所以通过测出链表长度，再取余得到具体旋转位置；<br>&emsp; （2）将两段链表连接时，快慢指针分别应处于什么位置，这是需要自己在草稿纸上模拟下，确定连接时的操作。</p>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<blockquote>
+<p>方法1：快慢指针</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">rotateRight</span><span class="params">(ListNode* head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">nullptr</span>||head-&gt;next==<span class="literal">nullptr</span>||k==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        </span><br><span class="line">        ListNode *root=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        root-&gt;next=head;</span><br><span class="line"></span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(cursor!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            n++;</span><br><span class="line">            cursor=cursor-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//cout&lt;&lt;n&lt;&lt;endl;		//测试链表的长度是否正确，第一次自己写的时候就出错了</span></span><br><span class="line">        n=k%n;</span><br><span class="line">        <span class="comment">//cout&lt;&lt;n&lt;&lt;endl;</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//下面这个就保证了旋转的位置一定是在链表中的某个结合处，排除了旋转踏步（虽然k&gt;0，但仍不旋转）的情况</span></span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *slow=head,*fast=head;</span><br><span class="line">        <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(fast-&gt;next!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        root-&gt;next=slow-&gt;next;</span><br><span class="line">        fast-&gt;next=head;</span><br><span class="line">        slow-&gt;next=<span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*或者可以这样写，可以减少root结点的定义</span></span><br><span class="line"><span class="comment">        fast-&gt;next = head;</span></span><br><span class="line"><span class="comment">        fast = slow-&gt;next;</span></span><br><span class="line"><span class="comment">        slow-&gt;next = NULL;</span></span><br><span class="line"><span class="comment">        return fast;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*被各种特殊情况打败 或 超出时间限制*/</span></span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">nullptr</span>||head-&gt;next==<span class="literal">nullptr</span>||k==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *root=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        root-&gt;next=head;</span><br><span class="line">        ListNode *slow=head,*fast=head;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(k--)&#123;         <span class="comment">//为了让快指针走到正确的位置不如直接测长度，然后再具体定位</span></span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(fast==<span class="literal">nullptr</span>)&#123;</span><br><span class="line">                fast=head;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(fast==slow)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(fast-&gt;next!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        root-&gt;next=slow-&gt;next;</span><br><span class="line">        fast-&gt;next=head;</span><br><span class="line">        slow-&gt;next=<span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root-&gt;next;</span><br><span class="line">*/</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<blockquote>
+<p>方法2：使链表变成循环链表，然后在具体的旋转位置处断开。喵啊~（见第二个参考链接的方法二）</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">rotateRight</span><span class="params">(ListNode *head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!head) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">1</span>;</span><br><span class="line">        ListNode *cur = head;</span><br><span class="line">        <span class="keyword">while</span> (cur-&gt;next) &#123;</span><br><span class="line">            ++n;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        cur-&gt;next = head;</span><br><span class="line">        <span class="keyword">int</span> m = n - k % n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode *newhead = cur-&gt;next;</span><br><span class="line">        cur-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> newhead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode</category>
       </categories>
@@ -179,50 +223,6 @@ dummy
       </tags>
   </entry>
   <entry>
-    <title>61. 旋转链表</title>
-    <url>/2021/06/09/LeetCode/LeetCode_20210609/</url>
-    <content><![CDATA[<blockquote>
-<p>参考链接：</p>
-<ol>
-<li><a href="https://leetcode-cn.com/problems/rotate-list/submissions/">https://leetcode-cn.com/problems/rotate-list/submissions/</a></li>
-<li><a href="https://www.cnblogs.com/grandyang/p/4355505.html">https://www.cnblogs.com/grandyang/p/4355505.html</a></li>
-</ol>
-</blockquote>
-<h5 id="给你一个链表的头节点-head-，旋转链表，将链表每个节点向右移动-k-个位置。"><a href="#给你一个链表的头节点-head-，旋转链表，将链表每个节点向右移动-k-个位置。" class="headerlink" title="给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。"></a>给你一个链表的头节点 <code>head</code> ，旋转链表，将链表每个节点向右移动 k 个位置。</h5><p><img src="https://img-blog.csdnimg.cn/img_convert/192699c8d11d5f13a4f06fdf4823fd2e.png#pic_center" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>输入：head = [1,2,3,4,5], k = 2<br>输出：[4,5,1,2,3]</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/98af10b6c9f0f827ddb34c07b83e40c6.png#pic_center" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>输入：head = [0,1,2], k = 4<br>输出：[2,0,1]</p>
-</blockquote>
-<span id="more"></span>
-
-<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
-
-<p>一般第一想法就是使用快慢指针，通过将链表分成两部分，再重新连接链表达到旋转的效果，使用快慢指针时注意有些坑：<br>&emsp; （1）这题旋转的位置可能会大于链表长度，所以通过测出链表长度，再取余得到具体旋转位置；<br>&emsp; （2）将两段链表连接时，快慢指针分别应处于什么位置，这是需要自己在草稿纸上模拟下，确定连接时的操作。</p>
-<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
-
-<blockquote>
-<p>方法1：快慢指针</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">rotateRight</span><span class="params">(ListNode* head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">nullptr</span>||head-&gt;next==<span class="literal">nullptr</span>||k==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        </span><br><span class="line">        ListNode *root=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        root-&gt;next=head;</span><br><span class="line"></span><br><span class="line">        ListNode *cursor=head;</span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(cursor!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            n++;</span><br><span class="line">            cursor=cursor-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//cout&lt;&lt;n&lt;&lt;endl;		//测试链表的长度是否正确，第一次自己写的时候就出错了</span></span><br><span class="line">        n=k%n;</span><br><span class="line">        <span class="comment">//cout&lt;&lt;n&lt;&lt;endl;</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//下面这个就保证了旋转的位置一定是在链表中的某个结合处，排除了旋转踏步（虽然k&gt;0，但仍不旋转）的情况</span></span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *slow=head,*fast=head;</span><br><span class="line">        <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(fast-&gt;next!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        root-&gt;next=slow-&gt;next;</span><br><span class="line">        fast-&gt;next=head;</span><br><span class="line">        slow-&gt;next=<span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*或者可以这样写，可以减少root结点的定义</span></span><br><span class="line"><span class="comment">        fast-&gt;next = head;</span></span><br><span class="line"><span class="comment">        fast = slow-&gt;next;</span></span><br><span class="line"><span class="comment">        slow-&gt;next = NULL;</span></span><br><span class="line"><span class="comment">        return fast;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*被各种特殊情况打败 或 超出时间限制*/</span></span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">nullptr</span>||head-&gt;next==<span class="literal">nullptr</span>||k==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode *root=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        root-&gt;next=head;</span><br><span class="line">        ListNode *slow=head,*fast=head;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(k--)&#123;         <span class="comment">//为了让快指针走到正确的位置不如直接测长度，然后再具体定位</span></span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(fast==<span class="literal">nullptr</span>)&#123;</span><br><span class="line">                fast=head;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(fast==slow)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(fast-&gt;next!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            fast=fast-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        root-&gt;next=slow-&gt;next;</span><br><span class="line">        fast-&gt;next=head;</span><br><span class="line">        slow-&gt;next=<span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root-&gt;next;</span><br><span class="line">*/</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
-
-<blockquote>
-<p>方法2：使链表变成循环链表，然后在具体的旋转位置处断开。喵啊~（见第二个参考链接的方法二）</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">rotateRight</span><span class="params">(ListNode *head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!head) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">1</span>;</span><br><span class="line">        ListNode *cur = head;</span><br><span class="line">        <span class="keyword">while</span> (cur-&gt;next) &#123;</span><br><span class="line">            ++n;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        cur-&gt;next = head;</span><br><span class="line">        <span class="keyword">int</span> m = n - k % n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode *newhead = cur-&gt;next;</span><br><span class="line">        cur-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> newhead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>142. 环形链表 II</title>
     <url>/2021/06/25/LeetCode/LeetCode_20210617/</url>
     <content><![CDATA[<blockquote>
@@ -236,15 +236,15 @@ dummy
 <p><strong>进阶</strong> ：你能用 O(1)（即，常量）内存解决此问题吗？</p>
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<p>示例1：<br><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt="在这里插入图片描述"></p>
+<p>示例1：<br><img src="/images/LeetCode_141_1.jpg"></p>
 <blockquote>
 <p>输入：head = [3,2,0,-4], pos = 1<br>输出：返回索引为 1 的链表节点<br>解释：链表中有一个环，其尾部连接到第二个节点。</p>
 </blockquote>
-<p>示例2：<br><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt="在这里插入图片描述"></p>
+<p>示例2：<br><img src="/images/LeetCode_141_2.jpg"></p>
 <blockquote>
 <p>输入：head = [1,2], pos = 0<br>输出：返回索引为 0 的链表节点<br>解释：链表中有一个环，其尾部连接到第一个节点。</p>
 </blockquote>
-<p>示例3：<br><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt="在这里插入图片描述"></p>
+<p>示例3：<br><img src="/images/LeetCode_141_3.jpg"></p>
 <blockquote>
 <p>输入：head = [1], pos = -1<br>输出：返回 null<br>解释：链表中没有环。</p>
 </blockquote>
@@ -545,15 +545,15 @@ dummy
 <p><strong>进阶</strong> ：你能用 O(1)（即，常量）内存解决此问题吗？</p>
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<p>示例1：<br><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt="在这里插入图片描述"></p>
+<p>示例1：<br><img src="/images/LeetCode_141_1.jpg"></p>
 <blockquote>
 <p>输入：head = [3,2,0,-4], pos = 1<br>输出：true<br>解释：链表中有一个环，其尾部连接到第二个节点。</p>
 </blockquote>
-<p>示例2：<br><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt="在这里插入图片描述"></p>
+<p>示例2：<br><img src="/images/LeetCode_141_2.jpg"></p>
 <blockquote>
 <p>输入：head = [1,2], pos = 0<br>输出：true<br>解释：链表中有一个环，其尾部连接到第一个节点。</p>
 </blockquote>
-<p>示例3：<br><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt="在这里插入图片描述"></p>
+<p>示例3：<br><img src="/images/LeetCode_141_3.jpg"></p>
 <blockquote>
 <p>输入：head = [1], pos = -1<br>输出：false<br>解释：链表中没有环。</p>
 </blockquote>
