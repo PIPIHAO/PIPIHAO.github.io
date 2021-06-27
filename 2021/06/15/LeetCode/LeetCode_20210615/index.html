@@ -20,29 +20,32 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;pipihao.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="在需要截断的地方加入这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废">
+<meta name="description" content="参考链接：   https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;insertion-sort-list&#x2F;solution&#x2F;dui-lian-biao-jin-xing-cha-ru-pai-xu-by-leetcode-s&#x2F; https:&#x2F;&#x2F;grandyang.com&#x2F;leetcode&#x2F;147&#x2F;   对链表进行插入排序。   示例1：  输入: 4-&gt;2-&gt;1-&amp;g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="24. 两两交换链表中的节点">
-<meta property="og:url" content="https://pipihao.github.io/2021/06/08/LeetCode/LeetCode_20210608/index.html">
+<meta property="og:title" content="147. 对链表进行插入排序">
+<meta property="og:url" content="https://pipihao.github.io/2021/06/15/LeetCode/LeetCode_20210615/index.html">
 <meta property="og:site_name" content="皮皮豪">
-<meta property="og:description" content="在需要截断的地方加入这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废">
+<meta property="og:description" content="参考链接：   https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;insertion-sort-list&#x2F;solution&#x2F;dui-lian-biao-jin-xing-cha-ru-pai-xu-by-leetcode-s&#x2F; https:&#x2F;&#x2F;grandyang.com&#x2F;leetcode&#x2F;147&#x2F;   对链表进行插入排序。   示例1：  输入: 4-&gt;2-&gt;1-&amp;g">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-08T11:35:42.108Z">
-<meta property="article:modified_time" content="2021-06-08T12:24:27.933Z">
+<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_147_1.jpg">
+<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_147_2.jpg">
+<meta property="article:published_time" content="2021-06-15T08:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-27T09:54:21.465Z">
 <meta property="article:author" content="杨文豪">
 <meta property="article:tag" content="LeetCode">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pipihao.github.io/images/LeetCode_147_1.jpg">
 
 
-<link rel="canonical" href="https://pipihao.github.io/2021/06/08/LeetCode/LeetCode_20210608/">
+<link rel="canonical" href="https://pipihao.github.io/2021/06/15/LeetCode/LeetCode_20210615/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;pipihao.github.io&#x2F;2021&#x2F;06&#x2F;08&#x2F;LeetCode&#x2F;LeetCode_20210608&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;08&#x2F;LeetCode&#x2F;LeetCode_20210608&#x2F;&quot;,&quot;title&quot;:&quot;24. 两两交换链表中的节点&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;pipihao.github.io&#x2F;2021&#x2F;06&#x2F;15&#x2F;LeetCode&#x2F;LeetCode_20210615&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;15&#x2F;LeetCode&#x2F;LeetCode_20210615&#x2F;&quot;,&quot;title&quot;:&quot;147. 对链表进行插入排序&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>24. 两两交换链表中的节点 | 皮皮豪</title>
+<title>147. 对链表进行插入排序 | 皮皮豪</title>
   
 
 
@@ -151,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E9%9C%80%E8%A6%81%E6%88%AA%E6%96%AD%E7%9A%84%E5%9C%B0%E6%96%B9%E5%8A%A0%E5%85%A5"><span class="nav-number">1.</span> <span class="nav-text">在需要截断的地方加入</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E5%88%86%E6%88%90%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%EF%BC%8C%E5%90%8E%E9%9D%A2%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9%E4%BE%9D%E6%AC%A1%E6%8F%92%E5%85%A5%E5%89%8D%E9%9D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD"><span class="nav-number">1.</span> <span class="nav-text">方法一：分成两个链表，后面链表的节点依次插入前面链表中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E4%BB%8E%E5%89%8D%E5%BE%80%E5%90%8E%E6%89%BE%E6%8F%92%E5%85%A5%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">方法二：从前往后找插入点</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -247,7 +250,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pipihao.github.io/2021/06/08/LeetCode/LeetCode_20210608/">
+    <link itemprop="mainEntityOfPage" href="https://pipihao.github.io/2021/06/15/LeetCode/LeetCode_20210615/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -260,7 +263,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          24. 两两交换链表中的节点
+          147. 对链表进行插入排序
         </h1>
 
         <div class="post-meta-container">
@@ -270,10 +273,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-06-08 03:35:42 / 修改时间：04:24:27" itemprop="dateCreated datePublished" datetime="2021-06-08T03:35:42-08:00">2021-06-08</time>
+      <time title="创建时间：2021-06-15 00:00:00" itemprop="dateCreated datePublished" datetime="2021-06-15T00:00:00-08:00">2021-06-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-27 01:54:21" itemprop="dateModified" datetime="2021-06-27T01:54:21-08:00">2021-06-27</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -294,12 +303,36 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="在需要截断的地方加入"><a href="#在需要截断的地方加入" class="headerlink" title="在需要截断的地方加入"></a>在需要截断的地方加入</h1><p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废</p>
-<span id="more"></span>                
+        <blockquote>
+<p>参考链接： </p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/insertion-sort-list/solution/dui-lian-biao-jin-xing-cha-ru-pai-xu-by-leetcode-s/">https://leetcode-cn.com/problems/insertion-sort-list/solution/dui-lian-biao-jin-xing-cha-ru-pai-xu-by-leetcode-s/</a></li>
+<li><a target="_blank" rel="noopener" href="https://grandyang.com/leetcode/147/">https://grandyang.com/leetcode/147/</a></li>
+</ol>
+</blockquote>
+<p>对链表进行插入排序。</p>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<p>这是废话这是废<br>话这是废话这是废话这是<br>废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废<br>话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> //递归</span></span><br><span class="line"><span class="comment">class Solution &#123;</span></span><br><span class="line"><span class="comment">public:</span></span><br><span class="line"><span class="comment">    ListNode* swapPairs(ListNode* head) &#123;</span></span><br><span class="line"><span class="comment">        if(head==nullptr||head-&gt;next==nullptr)</span></span><br><span class="line"><span class="comment">            return head;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *temp=head-&gt;next;</span></span><br><span class="line"><span class="comment">        head-&gt;next=swapPairs(head-&gt;next-&gt;next);</span></span><br><span class="line"><span class="comment">        temp-&gt;next=head;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        return temp;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//迭代</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        ListNode *root=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        root-&gt;next=head;</span><br><span class="line"></span><br><span class="line">        ListNode *tmp=root;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(tmp-&gt;next!=<span class="literal">nullptr</span>)&#123;              <span class="comment">//如果是偶数个结点直接跳出循环</span></span><br><span class="line">            ListNode *left=tmp-&gt;next;</span><br><span class="line">            ListNode *right=left-&gt;next;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(left-&gt;next!=<span class="literal">nullptr</span>)&#123;            </span><br><span class="line">                tmp-&gt;next=right;</span><br><span class="line">                left-&gt;next=right-&gt;next;</span><br><span class="line">                right-&gt;next=left;       <span class="comment">//这里的left和right不要写反了</span></span><br><span class="line"></span><br><span class="line">                cout&lt;&lt;left-&gt;val&lt;&lt;<span class="string">&quot;       &quot;</span>&lt;&lt;right-&gt;val&lt;&lt;endl;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;                      <span class="comment">//这里是判断最后剩一个结点的情况，也就是奇数个节点的情况</span></span><br><span class="line">                <span class="keyword">return</span> root-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            tmp=left;       <span class="comment">//注意这里不要写成tmp=right,因为left和right的位置调换了</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root-&gt;next;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        ListNode *root=new ListNode(0);</span></span><br><span class="line"><span class="comment">        root-&gt;next=head;</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        ListNode *cursor=root;</span></span><br><span class="line"><span class="comment">        while(cursor-&gt;next!=nullptr&amp;&amp;cursor-&gt;next-&gt;next!=nullptr)&#123;//注意条件是“&amp;&amp;”，不是“||”</span></span><br><span class="line"><span class="comment">            ListNode *p=cursor-&gt;next;</span></span><br><span class="line"><span class="comment">            ListNode *q=p-&gt;next;</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">            cursor-&gt;next=q;</span></span><br><span class="line"><span class="comment">            p-&gt;next=q-&gt;next;</span></span><br><span class="line"><span class="comment">            q-&gt;next=p;</span></span><br><span class="line"><span class="comment">            cursor=cursor-&gt;next-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        return root-&gt;next;*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>示例1：</p>
+<blockquote>
+<p>输入: 4-&gt;2-&gt;1-&gt;3<br>输出: 1-&gt;2-&gt;3-&gt;4</p>
+</blockquote>
+<p>示例2：</p>
+<blockquote>
+<p>输入: -1-&gt;5-&gt;3-&gt;4-&gt;0<br>输出: -1-&gt;0-&gt;3-&gt;4-&gt;5</p>
+</blockquote>
+<span id="more"></span>
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
+<h3 id="方法一：分成两个链表，后面链表的节点依次插入前面链表中"><a href="#方法一：分成两个链表，后面链表的节点依次插入前面链表中" class="headerlink" title="方法一：分成两个链表，后面链表的节点依次插入前面链表中"></a>方法一：分成两个链表，后面链表的节点依次插入前面链表中</h3><p>一个元素一个元素的从原链表中取出来，然后按顺序插入到新链表中，时间复杂度为 O(n2)，是一种效率并不是很高的算法，但是空间复杂度为 O(1)，以高时间复杂度换取了低空间复杂度<br><img src="/images/LeetCode_147_1.jpg"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">insertionSortList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//注意开始并没有连接头节点，依然是将其分成两个链表</span></span><br><span class="line">		<span class="comment">//将后一个链表依次插入到前一个链表当中</span></span><br><span class="line">        ListNode* dummy=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">-1</span>);		</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(head) &#123;</span><br><span class="line">            ListNode* tmp=head-&gt;next; </span><br><span class="line">            ListNode* cursor=dummy;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//遍历查找插入位置</span></span><br><span class="line">            <span class="keyword">while</span>(cursor-&gt;next!=<span class="literal">nullptr</span> &amp;&amp; cursor-&gt;next-&gt;val &lt; head-&gt;val) &#123;</span><br><span class="line">                cursor=cursor-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//找到后进行插入</span></span><br><span class="line">			<span class="comment">//开始第一个节点，因为cursor==dummy，所以第一次插入cursor-&gt;next是为nullptr</span></span><br><span class="line">			<span class="comment">//接下来插入就是依次插入节点到第一个链表中了</span></span><br><span class="line">            head-&gt;next=cursor-&gt;next;</span><br><span class="line">            cursor-&gt;next=head;</span><br><span class="line">            head=tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
+
+<h3 id="方法二：从前往后找插入点"><a href="#方法二：从前往后找插入点" class="headerlink" title="方法二：从前往后找插入点"></a>方法二：从前往后找插入点</h3><img src="/images/LeetCode_147_2.jpg">
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">insertionSortList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) </span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode* dummy = <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">        dummy-&gt;next = head;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//lastSorted标志的是前面已经排好序链表的最后一个节点</span></span><br><span class="line">        <span class="comment">//和上面的方法不同是这个链表没有断</span></span><br><span class="line">        ListNode* lastSorted = head;</span><br><span class="line">        ListNode* cursor = head-&gt;next;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (cursor) &#123;</span><br><span class="line">            <span class="comment">//如果比排好序的最后一个节点值还大，就老老实实在最后面吧</span></span><br><span class="line">            <span class="keyword">if</span> (lastSorted-&gt;val &lt;= cursor-&gt;val) &#123;</span><br><span class="line">                lastSorted = lastSorted-&gt;next;</span><br><span class="line">            &#125; </span><br><span class="line"></span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                ListNode *prev = dummy;</span><br><span class="line">                <span class="keyword">while</span> (prev-&gt;next-&gt;val &lt;= cursor-&gt;val) &#123;</span><br><span class="line">                    prev = prev-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                lastSorted-&gt;next = cursor-&gt;next;</span><br><span class="line">                cursor-&gt;next = prev-&gt;next;</span><br><span class="line">                prev-&gt;next = cursor;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            cursor = lastSorted-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dummy-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -316,13 +349,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/06/07/LeetCode/LeetCode_20210607/" rel="prev" title="83. 删除排序链表中的重复元素">
-                  <i class="fa fa-chevron-left"></i> 83. 删除排序链表中的重复元素
+                <a href="/2021/06/10/LeetCode/LeetCode_20210610/" rel="prev" title="86. 分隔链表">
+                  <i class="fa fa-chevron-left"></i> 86. 分隔链表
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/06/09/LeetCode/LeetCode_20210609/" rel="next" title="61. 旋转链表">
-                  61. 旋转链表 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/06/16/LeetCode/LeetCode_20210616/" rel="next" title="82. 删除排序链表中的重复元素 II">
+                  82. 删除排序链表中的重复元素 II <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
