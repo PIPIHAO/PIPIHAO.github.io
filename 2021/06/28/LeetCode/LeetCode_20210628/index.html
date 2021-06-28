@@ -20,33 +20,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;pipihao.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="参考链接：   https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;linked-list-cycle&#x2F;solution&#x2F;huan-xing-lian-biao-by-leetcode-solution&#x2F; https:&#x2F;&#x2F;grandyang.com&#x2F;leetcode&#x2F;141&#x2F;   给定一个链表，判断链表中是否有环。 进阶 ：你能用 O(1)（即，常量）内存解决此问题吗？   示例1">
+<meta name="description" content="参考链接：   https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;intersection-of-two-linked-lists&#x2F;solution&#x2F;xiang-jiao-lian-biao-by-leetcode-solutio-a8jn&#x2F; https:&#x2F;&#x2F;grandyang.com&#x2F;leetcode&#x2F;160&#x2F;   给你两个单链表的头节点 headA 和 headB ，请你找出">
 <meta property="og:type" content="article">
-<meta property="og:title" content="141. 环形链表">
-<meta property="og:url" content="https://pipihao.github.io/2021/06/25/LeetCode/LeetCode_20210625/index.html">
+<meta property="og:title" content="160. 相交链表">
+<meta property="og:url" content="https://pipihao.github.io/2021/06/28/LeetCode/LeetCode_20210628/index.html">
 <meta property="og:site_name" content="皮皮豪">
-<meta property="og:description" content="参考链接：   https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;linked-list-cycle&#x2F;solution&#x2F;huan-xing-lian-biao-by-leetcode-solution&#x2F; https:&#x2F;&#x2F;grandyang.com&#x2F;leetcode&#x2F;141&#x2F;   给定一个链表，判断链表中是否有环。 进阶 ：你能用 O(1)（即，常量）内存解决此问题吗？   示例1">
+<meta property="og:description" content="参考链接：   https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;intersection-of-two-linked-lists&#x2F;solution&#x2F;xiang-jiao-lian-biao-by-leetcode-solutio-a8jn&#x2F; https:&#x2F;&#x2F;grandyang.com&#x2F;leetcode&#x2F;160&#x2F;   给你两个单链表的头节点 headA 和 headB ，请你找出">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_141_1.png">
-<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_141_2.png">
-<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_141_3.png">
-<meta property="article:published_time" content="2021-06-25T08:25:54.239Z">
-<meta property="article:modified_time" content="2021-06-25T12:35:23.396Z">
+<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_160.png">
+<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_160_1.png">
+<meta property="og:image" content="https://pipihao.github.io/images/LeetCode_160_2.png">
+<meta property="article:published_time" content="2021-06-28T08:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-28T14:49:08.255Z">
 <meta property="article:author" content="杨文豪">
 <meta property="article:tag" content="LeetCode">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pipihao.github.io/images/LeetCode_141_1.png">
+<meta name="twitter:image" content="https://pipihao.github.io/images/LeetCode_160.png">
 
 
-<link rel="canonical" href="https://pipihao.github.io/2021/06/25/LeetCode/LeetCode_20210625/">
+<link rel="canonical" href="https://pipihao.github.io/2021/06/28/LeetCode/LeetCode_20210628/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;pipihao.github.io&#x2F;2021&#x2F;06&#x2F;25&#x2F;LeetCode&#x2F;LeetCode_20210625&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;25&#x2F;LeetCode&#x2F;LeetCode_20210625&#x2F;&quot;,&quot;title&quot;:&quot;141. 环形链表&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;pipihao.github.io&#x2F;2021&#x2F;06&#x2F;28&#x2F;LeetCode&#x2F;LeetCode_20210628&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;28&#x2F;LeetCode&#x2F;LeetCode_20210628&#x2F;&quot;,&quot;title&quot;:&quot;160. 相交链表&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>141. 环形链表 | 皮皮豪</title>
+<title>160. 相交链表 | 皮皮豪</title>
   
 
 
@@ -155,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">方法一:哈希表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88"><span class="nav-number">2.</span> <span class="nav-text">方法二：快慢指针</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E6%B6%88%E9%99%A4%E9%93%BE%E8%A1%A8%E9%95%BF%E5%BA%A6%E5%B7%AE-%E4%BE%9D%E6%AC%A1%E5%AF%B9%E6%AF%94"><span class="nav-number">1.</span> <span class="nav-text">方法一：消除链表长度差 + 依次对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E6%9E%84%E6%88%90%E7%8E%AF"><span class="nav-number">2.</span> <span class="nav-text">方法二：构成环</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -251,7 +251,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pipihao.github.io/2021/06/25/LeetCode/LeetCode_20210625/">
+    <link itemprop="mainEntityOfPage" href="https://pipihao.github.io/2021/06/28/LeetCode/LeetCode_20210628/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -264,7 +264,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          141. 环形链表
+          160. 相交链表
         </h1>
 
         <div class="post-meta-container">
@@ -276,7 +276,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-06-25 00:25:54 / 修改时间：04:35:23" itemprop="dateCreated datePublished" datetime="2021-06-25T00:25:54-08:00">2021-06-25</time>
+      <time title="创建时间：2021-06-28 00:00:00 / 修改时间：06:49:08" itemprop="dateCreated datePublished" datetime="2021-06-28T00:00:00-08:00">2021-06-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -301,38 +301,36 @@
         <blockquote>
 <p>参考链接： </p>
 <ol>
-<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle/solution/huan-xing-lian-biao-by-leetcode-solution/">https://leetcode-cn.com/problems/linked-list-cycle/solution/huan-xing-lian-biao-by-leetcode-solution/</a></li>
-<li><a target="_blank" rel="noopener" href="https://grandyang.com/leetcode/141/">https://grandyang.com/leetcode/141/</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/xiang-jiao-lian-biao-by-leetcode-solutio-a8jn/">https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/xiang-jiao-lian-biao-by-leetcode-solutio-a8jn/</a></li>
+<li><a target="_blank" rel="noopener" href="https://grandyang.com/leetcode/160/">https://grandyang.com/leetcode/160/</a></li>
 </ol>
 </blockquote>
-<p>给定一个链表，判断链表中是否有环。</p>
-<p><strong>进阶</strong> ：你能用 O(1)（即，常量）内存解决此问题吗？</p>
+<p>给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 <code>null</code> 。</p>
+<p>图示两个链表在节点 <code>c1</code> 开始相交：<br><img src="/images/LeetCode_160.png"></p>
+<p>题目数据 <strong>保证</strong> 整个链式结构中不存在环。</p>
+<p> <strong>注意</strong> ，函数返回结果后，链表必须 <strong>保持其原始结构</strong> 。</p>
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<p>示例1：<br><img src="/images/LeetCode_141_1.png"></p>
+<p>示例1：<br><img src="/images/LeetCode_160_1.png"></p>
 <blockquote>
-<p>输入：head = [3,2,0,-4], pos = 1<br>输出：true<br>解释：链表中有一个环，其尾部连接到第二个节点。</p>
+<p>输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3<br>输出：Intersected at ‘8’<br>解释：相交节点的值为 8 （注意，如果两个链表相交则不能为 0）。</p>
 </blockquote>
-<p>示例2：<br><img src="/images/LeetCode_141_2.png"></p>
+<p>示例2：<br><img src="/images/LeetCode_160_2.png"></p>
 <blockquote>
-<p>输入：head = [1,2], pos = 0<br>输出：true<br>解释：链表中有一个环，其尾部连接到第一个节点。</p>
+<p>输入：intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1<br>输出：Intersected at ‘2’<br>解释：相交节点的值为 2 （注意，如果两个链表相交则不能为 0）。</p>
 </blockquote>
-<p>示例3：<br><img src="/images/LeetCode_141_3.png"></p>
-<blockquote>
-<p>输入：head = [1], pos = -1<br>输出：false<br>解释：链表中没有环。</p>
-</blockquote>
+<p>示例3：<br>输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2<br>输出：null<br>解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。</p>
 <span id="more"></span>
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<h3 id="方法一-哈希表"><a href="#方法一-哈希表" class="headerlink" title="方法一:哈希表"></a>方法一:哈希表</h3><p>最容易想到的方法是遍历所有节点，每次遍历到一个节点时，判断该节点此前是否被访问过。</p>
-<p>具体地，我们可以使用哈希表来存储所有已经访问过的节点。每次我们到达一个节点，如果该节点已经存在于哈希表中，则说明该链表是环形链表，否则就将该节点加入哈希表中。重复这一过程，直到我们遍历完整个链表即可。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        unordered_set&lt;ListNode*&gt; seen;</span><br><span class="line">        <span class="keyword">while</span> (head != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (seen.<span class="built_in">count</span>(head)) &#123;	<span class="comment">//count函数的功能是：统计容器中等于value元素的个数，如果 &gt; 1,就有环</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            seen.<span class="built_in">insert</span>(head);</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="方法一：消除链表长度差-依次对比"><a href="#方法一：消除链表长度差-依次对比" class="headerlink" title="方法一：消除链表长度差 + 依次对比"></a>方法一：消除链表长度差 + 依次对比</h3><p>如果两个链长度相同的话，那么对应的一个个比下去就能找到，所以只需要把长链表变短即可。具体算法为：分别遍历两个链表，得到分别对应的长度。然后求长度的差值，把较长的那个链表向后移动这个差值的个数，然后一一比较即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">getIntersectionNode</span><span class="params">(ListNode *headA, ListNode *headB)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!headA||!headB)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> lenA=<span class="built_in">lengthList</span>(headA),lenB=<span class="built_in">lengthList</span>(headB);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(lenA&lt;lenB)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lenB-lenA;i++) headB=headB-&gt;next;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(lenA&gt;lenB)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lenA-lenB;i++) headA=headA-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(headA &amp;&amp; headB &amp;&amp; headA!=headB)&#123;</span><br><span class="line">            headA=headA-&gt;next;</span><br><span class="line">            headB=headB-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> (headA&amp;&amp;headB)?headA:<span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthList</span><span class="params">(ListNode *head)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(head)&#123;</span><br><span class="line">            len++;</span><br><span class="line">            head=head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> len;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
 <p><span><span style="font-family:Verdana, Arial, Helvetica, sans-serif;line-height:19px;text-indent:26px;"><span style="font-size:14px;"><span style="font-family:Arial;line-height:26px;"><br></span></span></span></span></p>
 
-<h3 id="方法二：快慢指针"><a href="#方法二：快慢指针" class="headerlink" title="方法二：快慢指针"></a>方法二：快慢指针</h3><p>本方法需要读者对「Floyd 判圈算法」（又称龟兔赛跑算法）有所了解。</p>
-<p>假想「乌龟」和「兔子」在链表上移动，「兔子」跑得快，「乌龟」跑得慢。当「乌龟」和「兔子」从链表上的同一个节点开始移动时，如果该链表中没有环，那么「兔子」将一直处于「乌龟」的前方；如果该链表中有环，那么「兔子」会先于「乌龟」进入环，并且一直在环内移动。等到「乌龟」进入环时，由于「兔子」的速度快，它一定会在某个时刻与乌龟相遇，即套了「乌龟」若干圈。</p>
-<p>我们可以根据上述思路来解决本题。具体地，我们定义两个指针，一快一满。慢指针每次只移动一步，而快指针每次移动两步。初始时，慢指针在位置 head，而快指针在位置 head.next。这样一来，如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/*if(head==nullptr||head-&gt;next==nullptr)</span></span><br><span class="line"><span class="comment">            return false;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        ListNode *fast=head-&gt;next,*slow=head;</span></span><br><span class="line"><span class="comment">        while(fast!=slow)&#123;//有环一定会跳出循环，无环就在循环内判断直接结束程序</span></span><br><span class="line"><span class="comment">            if(fast==nullptr||fast-&gt;next==nullptr)  //出现的情况是：两个都不成立或只有一个成立，成立就返回false</span></span><br><span class="line"><span class="comment">                return false;</span></span><br><span class="line"><span class="comment">            fast=fast-&gt;next-&gt;next;</span></span><br><span class="line"><span class="comment">            slow=slow-&gt;next;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        return true;*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        ListNode *fast=head,*slow=head;</span><br><span class="line">        <span class="keyword">while</span>(fast&amp;&amp;fast-&gt;next)&#123;    <span class="comment">//循环截至条件，如果写成||，那么一个成立依然可能会继续循环</span></span><br><span class="line">            fast=fast-&gt;next-&gt;next;</span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(fast==slow)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="方法二：构成环"><a href="#方法二：构成环" class="headerlink" title="方法二：构成环"></a>方法二：构成环</h3><p>这道题还有一种特别巧妙的方法，虽然题目中强调了链表中不存在环，但是我们可以用环的思想来做，我们让两条链表分别从各自的开头开始往后遍历，当其中一条遍历到末尾时，我们跳到另一个条链表的开头继续遍历。两个指针最终会相等，而且只有两种情况，一种情况是在交点处相遇，另一种情况是在各自的末尾的空节点处相等。为什么一定会相等呢，因为两个指针走过的路程相同，是两个链表的长度之和，所以一定会相等。这个思路真的很巧妙，而且更重要的是代码写起来特别的简洁</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">getIntersectionNode</span><span class="params">(ListNode *headA, ListNode *headB)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!headA || !headB) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        ListNode *a = headA, *b = headB;</span><br><span class="line">        <span class="keyword">while</span> (a != b) &#123;</span><br><span class="line">            a = a ? a-&gt;next : headB;</span><br><span class="line">            b = b ? b-&gt;next : headA;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -349,14 +347,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/06/24/LeetCode/LeetCode_20210624/" rel="prev" title="19. 删除链表的倒数第 N 个结点">
-                  <i class="fa fa-chevron-left"></i> 19. 删除链表的倒数第 N 个结点
+                <a href="/2021/06/27/LeetCode/LeetCode_20210627/" rel="prev" title="143. 重排链表">
+                  <i class="fa fa-chevron-left"></i> 143. 重排链表
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/06/26/LeetCode/LeetCode_20210626/" rel="next" title="876. 链表的中间结点">
-                  876. 链表的中间结点 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
