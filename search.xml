@@ -985,8 +985,7 @@ dummy
   <entry>
     <title></title>
     <url>/2022/05/08/makedown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<ol>
-<li>有序列表：数字后接着一个英文句点，然后再接着一个空格，从1，i，a显示序号\<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 一</span><br><span class="line">2. 二\</span><br><span class="line">   1. 一</span><br><span class="line">   2. 二\</span><br><span class="line">      1. 一</span><br><span class="line">      2. 二</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="1-有序列表：数字后接着一个英文句点，然后再接着一个空格，从1，i，a显示序号"><a href="#1-有序列表：数字后接着一个英文句点，然后再接着一个空格，从1，i，a显示序号" class="headerlink" title="1. 有序列表：数字后接着一个英文句点，然后再接着一个空格，从1，i，a显示序号\"></a>1. 有序列表：数字后接着一个英文句点，然后再接着一个空格，从1，i，a显示序号\</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 一</span><br><span class="line">2. 二\</span><br><span class="line">   1. 一</span><br><span class="line">   2. 二\</span><br><span class="line">      1. 一</span><br><span class="line">      2. 二</span><br></pre></td></tr></table></figure>
 <ol>
 <li>一</li>
 <li>二\<ol>
@@ -999,9 +998,8 @@ dummy
 </ol>
 </li>
 </ol>
-</li>
-<li>无序列表：使用 *，+，- 表示无序列表，注意后面也要加空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*  一级列表 </span><br><span class="line">   - 二级列表</span><br><span class="line">       + 三级列表</span><br></pre></td></tr></table></figure></li>
-</ol>
+<h2 id="2-无序列表：使用-，-，-表示无序列表，注意后面也要加空格"><a href="#2-无序列表：使用-，-，-表示无序列表，注意后面也要加空格" class="headerlink" title="2. 无序列表：使用 *，+，- 表示无序列表，注意后面也要加空格"></a>2. 无序列表：使用 *，+，- 表示无序列表，注意后面也要加空格</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*  一级列表 </span><br><span class="line">   - 二级列表</span><br><span class="line">       + 三级列表</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>一级列表 <ul>
 <li>二级列表<ul>
@@ -1011,50 +1009,29 @@ dummy
 </ul>
 </li>
 </ul>
-<ol>
-<li><p>空格：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   &amp;ensp;</span><br><span class="line">   ```  </span><br><span class="line">   1&amp;ensp;1</span><br><span class="line"></span><br><span class="line">2. 制表符tab：</span><br></pre></td></tr></table></figure>
-<p> &emsp;</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    1&amp;emsp;1</span><br><span class="line"></span><br><span class="line">3. 换行：</span><br><span class="line">   在一行的末尾添加两个或多个空格，或者两个回车，或者加\，再或者使用下面方法</span><br></pre></td></tr></table></figure>
-<p>1</p>
-<br>
-1
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   1</span><br><span class="line">   &lt;/br&gt;</span><br><span class="line">   1&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4. 数学公式</span><br></pre></td></tr></table></figure>
-$$
-E = m c^2
-$$
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   $$</span><br><span class="line">    E = m c^2</span><br><span class="line">    $$</span><br><span class="line">5. 标题：</span><br><span class="line">   注意后面要跟空格</span><br></pre></td></tr></table></figure>
-#        一级标题
-##       二级标题
-###      三级标题
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   # 1</span><br><span class="line">   ## 2</span><br><span class="line">   ### 3</span><br><span class="line">   #### 4</span><br><span class="line"></span><br><span class="line">6. 插入图片</span><br><span class="line">   </span><br><span class="line">   [ ] 填写图片的Alt标签，用来描述图片的关键词，可以不写</span><br><span class="line">   &quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写</span><br></pre></td></tr></table></figure>
- <center>  <!--开始居中对齐-->
- ![]("图片链接","optional title")
- </center> <!--结束居中对齐-->
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   </span><br><span class="line">   &lt;center&gt;  &lt;!--开始居中对齐--&gt;</span><br><span class="line"></span><br><span class="line">    ![皮卡丘](https://th.bing.com/th/id/R.a553887bf31a4327672e5481ad505975?rik=p7%2bYIJib9wdxxQ&amp;riu=http%3a%2f%2ffaxian.mumayi.com%2fwp-content%2fuploads%2f2015%2f12%2f%e7%9a%ae%e5%8d%a1%e4%b8%98.png&amp;ehk=ePkxAj7CWUR9pUU0TvXpdLuZNtMIUmkA5QrTruHWq7Y%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0,&quot;皮卡丘&quot;)</span><br><span class="line">    &lt;/center&gt;</span><br><span class="line"></span><br><span class="line">7. 引用</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>你在哪！</p>
-<blockquote>
-<p>我在这！</p>
-<blockquote>
-<p>你原来一直在这里！！！</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p> ```</p>
-<blockquote>
-<p>你在哪！</p>
-<blockquote>
-<p>我在这！</p>
-<blockquote>
-<p>你原来一直在这里！！！</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li></li>
-</ol>
+<h2 id="3-空格："><a href="#3-空格：" class="headerlink" title="3. 空格："></a>3. 空格：</h2>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   &amp;ensp;</span><br><span class="line">   ```  </span><br><span class="line">   1&amp;ensp;1</span><br><span class="line"></span><br><span class="line">## 4. 制表符tab：</span><br></pre></td></tr></table></figure>
+<pre><code>&amp;emsp;
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    1&amp;emsp;1</span><br><span class="line"></span><br><span class="line">## 5. 换行：</span><br><span class="line">   在一行的末尾添加两个或多个空格，或者两个回车，或者加\，再或者使用下面方法</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>   1<br>   <br><br>   1<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   1</span><br><span class="line">   &lt;/br&gt;</span><br><span class="line">   1&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 6. 数学公式</span><br></pre></td></tr></table></figure><br>   $$<br>   E = m c^2<br>   $$<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   $$</span><br><span class="line">    E = m c^2</span><br><span class="line">    $$</span><br><span class="line"></span><br><span class="line">## 7. 标题：</span><br><span class="line">   注意后面要跟空格</span><br></pre></td></tr></table></figure></p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   # 1</span><br><span class="line">   ## 2</span><br><span class="line">   ### 3</span><br><span class="line">   #### 4</span><br><span class="line"></span><br><span class="line">## 8. 插入图片</span><br><span class="line">   </span><br><span class="line">   [ ] 填写图片的Alt标签，用来描述图片的关键词，可以不写</span><br><span class="line">   &quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;center&gt;  &lt;!--开始居中对齐--&gt;
+![](&quot;图片链接&quot;,&quot;optional title&quot;)
+&lt;/center&gt; &lt;!--结束居中对齐--&gt;
+</code></pre>
+   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   </span><br><span class="line"></span><br><span class="line">    ![皮卡丘](https://th.bing.com/th/id/R.a553887bf31a4327672e5481ad505975?rik=p7%2bYIJib9wdxxQ&amp;riu=http%3a%2f%2ffaxian.mumayi.com%2fwp-content%2fuploads%2f2015%2f12%2f%e7%9a%ae%e5%8d%a1%e4%b8%98.png&amp;ehk=ePkxAj7CWUR9pUU0TvXpdLuZNtMIUmkA5QrTruHWq7Y%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0,&quot;皮卡丘&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 9. 引用</span><br></pre></td></tr></table></figure>
+<pre><code>&gt;你在哪！
+&gt;&gt;我在这！
+&gt;&gt;&gt;你原来一直在这里！！！
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    &gt;你在哪！</span><br><span class="line">    &gt;&gt;我在这！</span><br><span class="line">    &gt;&gt;&gt;你原来一直在这里！！！</span><br><span class="line"></span><br><span class="line">## 10. 字体加粗，斜体，颜色</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>加粗：<br><strong>加粗文本</strong><br><strong>加粗文本</strong></p>
+<p>倾斜：<br><em>加粗文本</em><br><em>加粗文本</em></p>
+<p>颜色：<br><font face="黑体">黑体</font><br><font face="宋体">宋体</font><br><font face="仿宋">仿宋</font><br><font face="幼圆">幼圆</font><br><font face="楷书">楷书</font><br><font face="华文行楷">华文行楷</font><br><font face="华文隶书">华文隶书</font><br><font face="华文新魏">华文新魏</font><br><font face="华文彩云">华文彩云</font><br><font face="华文琥珀">华文琥珀</font></p>
+<p>字体大小：<br><font size=1>字体大小size=1</font><br><font size=3>字体大小size=3</font><br><font size=5>字体大小size=5</font></p>
+<p>字体类型：<br><font face="黑体">黑体</font><br><font face="宋体">宋体</font><br><font face="仿宋">仿宋</font><br><font face="幼圆">幼圆</font><br><font face="楷书">楷书</font><br><font face="华文行楷">华文行楷</font><br><font face="华文隶书">华文隶书</font><br><font face="华文新魏">华文新魏</font><br><font face="华文彩云">华文彩云</font><br><font face="华文琥珀">华文琥珀</font></p>
+<pre><code>
+</code></pre>
 ]]></content>
   </entry>
 </search>
