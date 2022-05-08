@@ -1,58 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/06/04/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="��������-YWH-Hello-World"><a href="#��������-YWH-Hello-World" class="headerlink" title="�������� YWH  Hello World"></a>�������� YWH  Hello World</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>ywh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ywh&#39;s article</title>
-    <url>/2021/06/04/ywh-s-article/</url>
-    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>11111111111</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>2222222222</p>
-<hr>
-<p>##啪啪啪啪啪啪</p>
-<p>333333333</p>
-]]></content>
-      <categories>
-        <category>yyy</category>
-      </categories>
-      <tags>
-        <tag>yzl</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>杨文豪的文章</title>
-    <url>/2021/06/05/my-first-article/</url>
-    <content><![CDATA[<p>这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文</p>
-]]></content>
-      <categories>
-        <category>hexo+github博客搭建</category>
-        <category>yyy</category>
-      </categories>
-      <tags>
-        <tag>ywh</tag>
-        <tag>uzl</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>21. 合并两个有序链表</title>
     <url>/2021/06/06/LeetCode/LeetCode_20210606/</url>
     <content><![CDATA[<p>这是废话这是废话这是废话这是废话这是废话这<br>是废话这是废话这是废话这是废话<br>这是废话这是废话这是废话这是废话这是废话这是废话这是废话</p>
@@ -1033,5 +981,80 @@ dummy
         <tag>LeetCode</tag>
         <tag>数组</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/05/08/makedown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<ol>
+<li>有序列表：数字后接着一个英文句点，然后再接着一个空格，从1，i，a显示序号\<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 一</span><br><span class="line">2. 二\</span><br><span class="line">   1. 一</span><br><span class="line">   2. 二\</span><br><span class="line">      1. 一</span><br><span class="line">      2. 二</span><br></pre></td></tr></table></figure>
+<ol>
+<li>一</li>
+<li>二\<ol>
+<li>一</li>
+<li>二\<ol>
+<li>一</li>
+<li>二</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>无序列表：使用 *，+，- 表示无序列表，注意后面也要加空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*  一级列表 </span><br><span class="line">   - 二级列表</span><br><span class="line">       + 三级列表</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>一级列表 <ul>
+<li>二级列表<ul>
+<li>三级列表</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>空格：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   &amp;ensp;</span><br><span class="line">   ```  </span><br><span class="line">   1&amp;ensp;1</span><br><span class="line"></span><br><span class="line">2. 制表符tab：</span><br></pre></td></tr></table></figure>
+<p> &emsp;</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    1&amp;emsp;1</span><br><span class="line"></span><br><span class="line">3. 换行：</span><br><span class="line">   在一行的末尾添加两个或多个空格，或者两个回车，或者加\，再或者使用下面方法</span><br></pre></td></tr></table></figure>
+<p>1</p>
+<br>
+1
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   1</span><br><span class="line">   &lt;/br&gt;</span><br><span class="line">   1&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4. 数学公式</span><br></pre></td></tr></table></figure>
+$$
+E = m c^2
+$$
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   $$</span><br><span class="line">    E = m c^2</span><br><span class="line">    $$</span><br><span class="line">5. 标题：</span><br><span class="line">   注意后面要跟空格</span><br></pre></td></tr></table></figure>
+#        一级标题
+##       二级标题
+###      三级标题
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   # 1</span><br><span class="line">   ## 2</span><br><span class="line">   ### 3</span><br><span class="line">   #### 4</span><br><span class="line"></span><br><span class="line">6. 插入图片</span><br><span class="line">   </span><br><span class="line">   [ ] 填写图片的Alt标签，用来描述图片的关键词，可以不写</span><br><span class="line">   &quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写</span><br></pre></td></tr></table></figure>
+ <center>  <!--开始居中对齐-->
+ ![]("图片链接","optional title")
+ </center> <!--结束居中对齐-->
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   </span><br><span class="line">   &lt;center&gt;  &lt;!--开始居中对齐--&gt;</span><br><span class="line"></span><br><span class="line">    ![皮卡丘](https://th.bing.com/th/id/R.a553887bf31a4327672e5481ad505975?rik=p7%2bYIJib9wdxxQ&amp;riu=http%3a%2f%2ffaxian.mumayi.com%2fwp-content%2fuploads%2f2015%2f12%2f%e7%9a%ae%e5%8d%a1%e4%b8%98.png&amp;ehk=ePkxAj7CWUR9pUU0TvXpdLuZNtMIUmkA5QrTruHWq7Y%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0,&quot;皮卡丘&quot;)</span><br><span class="line">    &lt;/center&gt;</span><br><span class="line"></span><br><span class="line">7. 引用</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>你在哪！</p>
+<blockquote>
+<p>我在这！</p>
+<blockquote>
+<p>你原来一直在这里！！！</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p> ```</p>
+<blockquote>
+<p>你在哪！</p>
+<blockquote>
+<p>我在这！</p>
+<blockquote>
+<p>你原来一直在这里！！！</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li></li>
+</ol>
+]]></content>
   </entry>
 </search>
